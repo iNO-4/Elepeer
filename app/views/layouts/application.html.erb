@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Elepeer</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body class="drawer drawer--left">
+    <header>
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="header-container">
+            <div role="banner">
+              <button type="button" class="drawer-toggle drawer-hamburger">
+                <span class="sr-only">toggle navigation</span>
+                <span class="drawer-hamburger-icon"></span>
+              </button>
+                <nav class="drawer-nav" role="navigation">
+                  <ul class="drawer-menu">
+                    <li class="drawer-menu-item"><%= link_to 'TOP', root_path, class: 'item' %></li>
+                    <li class="drawer-menu-item"><%= link_to 'About', homes_about_path, class: 'item' %></li>
+                    <li class="drawer-menu-item"><%= link_to '投稿一覧', "#", class: 'item' %></li>
+                    <li class="drawer-menu-item"><%= link_to 'ユーザ一覧', "#", class: 'item' %></li>
+                    <li class="drawer-menu-item"><%= link_to 'ランキング', "#", class: 'item' %></li>
+                    <li class="drawer-menu-item"><%= link_to '新規登録', "#", class: 'item' %></li>
+                    <li class="drawer-menu-item"><%= link_to 'ログイン', "#", class: 'item' %></li>
+                  </ul>
+                </nav>
+          </div>
+          <div class="logo">
+            <%= link_to image_tag('PF-logo1.png', style: "height: 50px;"), root_path %>
+          </div>
+          <p class="navbar-text navbar-right header-message">
+            ようこそ ゲスト さん!
+          </p>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <%= yield %>
+    </main>
+
+    <footer>
+      <p>こちらはポートフォリオのサイトとなっております。<br>
+      ©︎iNO.inc</p>
+    </footer>
+  </body>
+</html>

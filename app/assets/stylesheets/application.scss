@@ -1,0 +1,91 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "bootstrap-sprockets"; /*追加分*/
+@import "bootstrap"; /*追加分*/
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    background-color: #fff2f0;
+    padding-top: 70px;
+}
+
+.navbar-default {
+	background-color: white;
+}
+
+.header-container {
+	display: flex;
+	justify-content: flex-start;
+}
+
+.logo {
+	margin-left: 47%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.drawer-menu-item {
+	font-size: 2rem;
+	margin-bottom: 15px;
+	padding-left: 15px;
+	font-family: 'Noto Sans JP', sans-serif;
+}
+
+.item {
+	color: #b7282c;
+}
+
+.item:hover {
+	color: #b7282c;
+}
+
+.drawer-nav {
+	height: 80%;
+	padding-top: 70px;
+	background-color: white;
+}
+
+.drawer-hamburger {
+	width: 3rem;
+	padding-left: 5%;
+	padding-top: 23px;
+}
+
+.header-message {
+	margin-left: 30%;
+	margin-top: 2%;
+}
+
+.drawer-hamburger-icon{
+	background-color: #b7282c;
+}
+
+footer {
+	background-color: white;
+	height: 80px;
+}
+
+footer p {
+    text-align: center;
+    font-size: 5px;
+    padding-top: 25px;
+}

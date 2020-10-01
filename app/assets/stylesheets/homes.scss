@@ -1,0 +1,108 @@
+// Place all the styles related to the homes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/* スライドショー１ */
+#container {
+  height: 550px;
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+/* スライドショー2 */
+.image1 {
+	background-color: #ffe6f2;
+}
+
+.image2 {
+	background-image: url(kaden5.jpeg);
+}
+
+.image3 {
+	background-image: url(kaden6.jpeg);
+}
+
+.image4 {
+	background-image: url(kaden7.jpeg);
+}
+
+.top_image {
+    position: absolute;
+    left: 18%;
+    top: 35%;
+}
+
+.top_text {
+    color: white;
+    font-size: 80px;
+    position: absolute;
+    left: 61%;
+    top: 40%;
+}
+
+.about_message1 {
+	display: flex;
+	margin-left: 42%;
+	margin-bottom: 40px;
+	font-family: 'Noto Sans JP', sans-serif;
+}
+
+.about_message2 {
+	text-align: center;
+	font-family: 'Noto Sans JP', sans-serif;
+}
+
+.about_message2 p {
+	font-size: 18px;
+	margin-bottom: 15px;
+}
+
+.about_line {
+	border-top: solid 1px gray;
+	text-align: center;
+	width: 100%;
+	margin-top: 110px;
+	margin-bottom: 120px;
+}
+
+.row1 {
+	margin-bottom: 20px;
+}
+
+.top_text2 {
+	padding-top: 80px;
+	font-size: 15px;
+	font-family: 'Noto Sans JP', sans-serif;
+}
+
+.top_text3 {
+	margin-top: 100px;
+    font-size: 15px;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.top_text4 {
+	text-align: center;
+}
+
+.top_text4 p {
+	font-size: 25px;
+	font-family: 'Noto Sans JP', sans-serif;
+	position: relative;
+	display: inline-block;
+}
+
+/*下線*/
+.top_text4 p:before {
+	content: '';
+	position: absolute;
+	left: 50%;
+	bottom: -7px; /*線の上下位置*/
+	display: inline-block;
+	width: 200px; /*線の長さ*/
+	height: 2px; /*線の太さ*/
+	transform: translateX(-50%); /*位置調整*/
+	background-color: #b7282c; /*線の色*/
+	border-radius: 2px; /*線の丸み*/
+}
