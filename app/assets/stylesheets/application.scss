@@ -89,3 +89,35 @@ footer p {
     font-size: 5px;
     padding-top: 25px;
 }
+
+
+/*devise/registrations*/
+
+.registrations_container {
+	padding-top: 70px;
+}
+
+.sign_up_title {
+	text-align: center;
+}
+
+.sign_up_title p {
+	font-size: 30px;
+	font-family: 'Noto Sans JP', sans-serif;
+	position: relative;
+	display: inline-block;
+}
+
+/* 下線 */
+.sign_up_title p:before {
+	content: '';
+	position: absolute;
+	left: 50%;
+	bottom: -7px; /*線の上下位置*/
+	display: inline-block;
+	width: 200px; /*線の長さ*/
+	height: 2px; /*線の太さ*/
+	transform: translateX(-50%); /*位置調整*/
+	background-color: #b7282c; /*線の色*/
+	border-radius: 2px; /*線の丸み*/
+}

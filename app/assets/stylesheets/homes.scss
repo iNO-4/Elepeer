@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+/* homes/top */
 
 /* スライドショー１ */
 #container {
@@ -93,7 +94,7 @@
 	display: inline-block;
 }
 
-/*下線*/
+/* 下線 */
 .top_text4 p:before {
 	content: '';
 	position: absolute;
@@ -105,4 +106,15 @@
 	transform: translateX(-50%); /*位置調整*/
 	background-color: #b7282c; /*線の色*/
 	border-radius: 2px; /*線の丸み*/
+}
+
+
+/* homes/about */
+
+.about_container {
+	padding-top: 70px;
+}
+
+.about_container2 {
+	padding-bottom: 70px;
 }

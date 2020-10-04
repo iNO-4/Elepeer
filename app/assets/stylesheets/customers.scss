@@ -1,0 +1,48 @@
+// Place all the styles related to the customers controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/* customers/mypage */
+
+.mypage_container {
+	padding-top: 70px;
+	margin-bottom: 70px;
+	text-align: center;
+	font-family: 'Noto Sans JP', sans-serif;
+}
+
+.mypage_title {
+	font-size: 25px;
+	margin-bottom: 50px;
+}
+
+.mypage_list {
+	margin-bottom: 40px;
+}
+
+.mypage_item {
+	color: black;
+	dispray: inline-block;
+	border-bottom: solid 2px #b7282c;
+	font-size: 20px;
+}
+
+.mypage_item:hover {
+	color: gray;
+}
+
+
+/* customers/show */
+
+.user_information_container {
+	padding-top: 70px;
+	margin-bottom: 70px;
+	font-family: 'Noto Sans JP', sans-serif;
+}
+
+.user_information_title {
+	font-size: 25px;
+	margin-bottom: 50px;
+	text-align: center;
+}
