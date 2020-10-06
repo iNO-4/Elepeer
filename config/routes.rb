@@ -1,7 +1,19 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  get 'homes/top'
-  root 'homes#top'
 
-  get 'homes/about'
+  	resources :customers, only: [:show, :edit, :update, :index] do
+	  	member do
+		  get 'mypage'
+		  get 'unsubscribe'
+		  patch 'unsubscribe'
+		  get 'thanks'
+		end
+	end
+
+	devise_for :customers
+
+	get 'homes/top'
+	root 'homes#top'
+
+	get 'homes/about'
+
 end
