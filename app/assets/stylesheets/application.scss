@@ -79,9 +79,17 @@ body {
 	background-color: #b7282c;
 }
 
+/*フッターを下に固定するもの*/
+#wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
 footer {
 	background-color: white;
 	height: 80px;
+	margin-top: auto;
 }
 
 footer p {
@@ -89,7 +97,6 @@ footer p {
     font-size: 5px;
     padding-top: 25px;
 }
-
 
 /*devise/registrations*/
 

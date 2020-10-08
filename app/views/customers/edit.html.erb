@@ -1,2 +1,36 @@
-<h1>Customers#edit</h1>
-<p>Find me in app/views/customers/edit.html.erb</p>
+<div class="container user_edit_container">
+	<div class="user_edit_title">ユーザ情報編集</div>
+
+	<%= form_for(@customer) do |f| %>
+		<div class="user_edit_box">
+			<div class="user_edit_item">
+				<span>氏名</span>
+				<%= f.text_field :last_name, autofocus: true, autocomplete: "last_name" %>
+				<%= f.text_field :first_name, autofocus: true, autocomplete: "first_name" %>
+			</div>
+			<div class="user_edit_item">
+				<span>カナ</span>
+				<%= f.text_field :last_name_kana, autofocus: true, autocomplete: "last_name_kana" %>
+				<%= f.text_field :first_name_kana, autofocus: true, autocomplete: "first_name_kana" %>
+			</div>
+			<div class="user_edit_item">
+				<span>表示名</span>
+				<%= f.text_field :handle_name, autofocus: true, autocomplete: "handle_name" %>
+			</div>
+			<div class="user_edit_item">
+				<span>メールアドレス</span>
+				<%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+			</div>
+			<div class="user_edit_item">
+				<span>投稿数</span>aaa
+			</div>
+		</div>
+
+		<div class="user_edit_actions">
+          <%= f.submit "更新する", class: "btn btn-success btn-sm" %>
+          <% if customer_signed_in? && @customer.id == current_customer.id %>
+            <%= link_to '退会する', unsubscribe_customer_path(@customer), class: "btn btn-danger btn-sm" %>
+          <% end %>
+        </div>
+    <% end %>
+</div>

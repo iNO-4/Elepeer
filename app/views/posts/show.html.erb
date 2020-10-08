@@ -1,0 +1,48 @@
+<div class="container post_show_container">
+	<div class="post_show_title">投稿詳細</div>
+
+	<div class="post_show_box">
+		<div class="post_show_item">
+			<%= attachment_image_tag @post, :product_image, :fill, 100, 100, class: "product_image_show", fallback: "no_image.jpg" %>
+		<div class="post_show_item">
+			<p>タイトル</p>
+			<%= @post.title %>
+		</div>
+		<div class="post_show_item">
+			<p>商品名</p>
+			<%= @post.product_name %>
+		</div>
+		<div class="post_show_item">
+			<p>購入日</p>
+			<%= @post.bay_day %>
+		</div>
+		<div class="post_show_item">
+			<p>購入時価格</p>
+			<%= @post.price %>
+		</div>
+		<div class="post_show_item">
+			<p>コメント</p>
+			<%= @post.body %>
+		</div>
+		<div class="post_show_item">
+			<p>評価</p>
+			<div id="star-rate"></div>
+		</div>
+		<div class="post_show_action">
+			<%= link_to '編集する', edit_post_path(@post), class: "btn btn-primary btn-sm" %>
+		</div>
+	</div>
+</div>
+
+<script>
+	$('#star-rate').raty({
+	    size     : 36,
+	    starOff:  '<%= asset_path('star-off.png') %>',
+	    starOn : '<%= asset_path('star-on.png') %>',
+	    starHalf: '<%= asset_path('star-half.png') %>',
+	    scoreName: 'post[rate]',
+	    half: true,
+	    readOnly: true,
+	    score: <%= @post.rate %>,
+	});
+</script>

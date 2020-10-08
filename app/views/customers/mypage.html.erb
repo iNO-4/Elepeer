@@ -3,10 +3,10 @@
 
 	<div class="mypage_box">
 		<div class="mypage_list">
-			<%= link_to '投稿する', mypage_customer_path(current_customer), class: 'mypage_item' %>
+			<%= link_to '投稿する', new_post_path, class: 'mypage_item' %>
 		</div>
 		<div class="mypage_list">
-			<%= link_to '自分の投稿', mypage_customer_path(current_customer), class: 'mypage_item' %>
+			<%= link_to '自分の投稿', all_post_path(current_customer), class: 'mypage_item' %>
 		</div>
 		<div class="mypage_list">
 			<%= link_to 'ユーザ情報', customer_path(current_customer), class: 'mypage_item' %>

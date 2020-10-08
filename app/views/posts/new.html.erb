@@ -1,0 +1,49 @@
+<div class="container post_new_container">
+	<div class="post_new_title">投稿</div>
+
+	<div class="post_new_box">
+		<%= form_for(@post) do |f| %>
+			<div class="post_new_item">
+				<%= f.attachment_field :product_image %>
+			</div>
+			<div class="post_new_item">
+				<p>タイトル</p>
+				<%= f.text_field :title %>
+			</div>
+			<div class="post_new_item">
+				<p>商品名</p>
+				<%= f.text_field :product_name %>
+			</div>
+			<div class="post_new_item">
+				<p>購入日</p>
+				<%= f.text_field :bay_day %>
+			</div>
+			<div class="post_new_item">
+				<p>購入時価格</p>
+				<%= f.text_field :price %>
+			</div>
+			<div class="post_new_item">
+				<p>コメント</p>
+				<%= f.text_area :body %>
+			</div>
+			<div class="post_new_item" id="star">
+				<%= f.label :rate,'評価 ' %>
+				<%= f.hidden_field :rate, id: :review_star %>
+			</div>
+			<div class="post_new_actions">
+				<%= f.submit '投稿する' %>
+			</div>
+		<% end %>
+	</div>
+</div>
+
+<script>
+	$('#star').raty({
+	    size     : 36,
+	    starOff:  '<%= asset_path('star-off.png') %>',
+	    starOn : '<%= asset_path('star-on.png') %>',
+	    starHalf: '<%= asset_path('star-half.png') %>',
+	    scoreName: 'post[rate]',
+	    half: true,
+	});
+</script>

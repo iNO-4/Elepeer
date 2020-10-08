@@ -1,0 +1,12 @@
+<div class="container post_index_container">
+	<div class="post_index_title">投稿一覧</div>
+
+	<div class="post_index_box">
+		<% @post.each do |post| %>
+			<p>タイトル</p>
+			<span><%= post.title %></span>
+			<p>商品名</p>
+			<span><%= post.product_name %></span>
+		<% end %>
+	</div>
+</div>

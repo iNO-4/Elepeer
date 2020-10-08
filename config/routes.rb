@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 
+  get 'reviews/create'
+	devise_for :customers
+
+	get 'homes/top'
+	root 'homes#top'
+
+	get 'homes/about'
+
   	resources :customers, only: [:show, :edit, :update, :index] do
 	  	member do
 		  get 'mypage'
@@ -9,11 +17,12 @@ Rails.application.routes.draw do
 		end
 	end
 
-	devise_for :customers
+	resources :posts do
+		member do
+		  get 'all'
+		end
+	end
 
-	get 'homes/top'
-	root 'homes#top'
-
-	get 'homes/about'
+	resources :reviews
 
 end

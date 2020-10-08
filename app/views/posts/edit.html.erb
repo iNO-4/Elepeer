@@ -1,0 +1,51 @@
+<div class="container user_edit_container">
+	<div class="user_edit_title">投稿編集</div>
+
+	<%= form_for(@post) do |f| %>
+		<div class="post_edit_box">
+			<div class="post_edit_item">
+				<%= attachment_image_tag @post, :product_image, :fill, 100, 100, class: "product_image_show", fallback: "no_image.jpg" %>
+				<%= f.attachment_field :product_image %>
+			</div>
+			<div class="post_edit_item">
+				<p>タイトル</p>
+				<%= f.text_field :title, autofocus: true, autocomplete: "title" %>
+			</div>
+			<div class="post_edit_item">
+				<p>商品名</p>
+				<%= f.text_field :product_name, autofocus: true, autocomplete: "product_name" %>
+			</div>
+			<div class="post_edit_item">
+				<p>購入日</p>
+				<%= f.text_field :bay_day, autofocus: true, autocomplete: "bay_day" %>
+			</div>
+			<div class="post_edit_item">
+				<p>購入時価格</p>
+				<%= f.text_field :price, autofocus: true, autocomplete: "price" %>
+			</div>
+			<div class="post_edit_item">
+				<p>コメント</p>
+				<%= f.text_area :body, autofocus: true, autocomplete: "body" %>
+			</div>
+			<div class="post_edit_item" id="star">
+				<%= f.label :rate,'評価 ' %>
+				<%= f.hidden_field :rate, id: :review_star %>
+		</div>
+
+		<div class="post_edit_actions">
+          <%= f.submit "更新する", class: "btn btn-success btn-sm" %>
+        </div>
+    <% end %>
+</div>
+
+<script>
+	$('#star').raty({
+	    size     : 36,
+	    starOff:  '<%= asset_path('star-off.png') %>',
+	    starOn : '<%= asset_path('star-on.png') %>',
+	    starHalf: '<%= asset_path('star-half.png') %>',
+	    scoreName: 'post[rate]',
+	    half: true,
+	    score: <%= @post.rate %>,
+	});
+</script>
