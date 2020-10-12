@@ -7,7 +7,6 @@
 
 .mypage_container {
 	padding-top: 70px;
-	margin-bottom: 70px;
 	text-align: center;
 	font-family: 'Noto Sans JP', sans-serif;
 }
@@ -30,6 +29,7 @@
 
 .mypage_item:hover {
 	color: gray;
+	text-decoration: none;
 }
 
 
@@ -45,4 +45,135 @@
 	font-size: 25px;
 	margin-bottom: 50px;
 	text-align: center;
+}
+
+.user_information_item {
+	padding-left: 100px;
+}
+
+.user_information_box {
+	font-size: 15px;
+	margin-top: 60px;
+	margin-left: 60px;
+}
+
+.user_information_box table {
+	width: 140%;
+}
+
+.user_information_box td {
+	padding-top: 35px;
+	/* border-bottom: 2px solid #b7282c; */
+}
+
+.user_information_button {
+	text-align: center;
+	margin-top: 60px;
+}
+
+.user_information_box_other {
+	font-size: 17px;
+	margin-top: 110px;
+	margin-left: 60px;
+}
+
+.user_information_box_other table {
+	width: 140%;
+}
+
+.user_information_box_other td {
+	padding-top: 45px;
+	/* border-bottom: 2px solid #b7282c; */
+}
+
+.user_information_link {
+	padding-top: 90px;
+	padding-right: 20px;
+	font-size: 15px;
+}
+
+/* custmers/edit */
+
+.user_edit_container {
+	padding-top: 70px;
+	margin-bottom: 70px;
+	font-family: 'Noto Sans JP', sans-serif;
+}
+
+.user_edit_title {
+	font-size: 25px;
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+.col-xs-3.user_edit_img {
+	padding-left: 130px;
+}
+
+.user_edit_img_button {
+	padding-top: 45px;
+	padding-left: 65px;
+}
+
+.user_edit_box {
+	font-size: 17px;
+	padding-right: 50px;
+}
+
+.user_edit_item {
+	margin-top: 60px;
+}
+
+.user_edit_item span {
+	margin-right: 10px;
+}
+
+.user_edit_actions {
+	margin-top: 90px;
+	text-align: center;
+}
+
+.user_edit_actions2 {
+	text-align: center;
+	margin-top: 50px;
+}
+
+
+/* customers/unsubscribe */
+
+.user_unsubscribe_container {
+	padding-top: 150px;
+	font-family: 'Noto Sans JP', sans-serif;
+}
+
+.user_unsubscribe_title {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.user_unsubscribe_title p {
+	font-size: 25px;
+}
+
+.user_unsubscribe_box {
+	text-align: center;
+	margin-bottom: 70px;
+}
+
+.user_unsubscribe_box p {
+	font-size: 15px;
+}
+
+.user_unsubscribe_item {
+	text-align: center;
+}
+
+.user_unsubscribe_button {
+	margin-right: 50px;
+	display: inline-block;
+}
+
+.user_unsubscribe_button2 {
+	margin-left: 50px;
+	display: inline-block;
 }

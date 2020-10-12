@@ -9,7 +9,8 @@
 		<%= image_tag('PF-logo1.png', style: "width: 270px;") %>
 	</div>
 	<div class="top_text">
-		<p>SAMPLE</p>
+		<p>ようこそ</p>
+		<p>エレピアへ</p>
 	</div>
 </div>
 
@@ -53,20 +54,24 @@
 	<div class="top_text4">
 		<p>最新投稿一覧</p>
 	</div>
-	<h2>Hellow</h2>
-	<h2>Hellow</h2>
-	<h2>Hellow</h2>
-	<h2>Hellow</h2>
-	<h2>Hellow</h2>
-	<h2>Hellow</h2>
-	<h2>Hellow</h2>
-	<h2>Hellow</h2>
-	<h2>Hellow</h2>
-	<h2>Hellow</h2>
-	<h2>Hellow</h2>
-	<h2>Hellow</h2>
-	<h2>Hellow</h2>
-	<h2>Hellow</h2>
-	<h2>Hellow</h2>
-	<h2>Helloooooooo!</h2>
+
+	<div class="post_top_box">
+		<% @posts.each do |post| %>
+    		<%= link_to post_path(post) do %>
+      			<div class="post_top_item">
+        			<div class="index_img">
+          				<%= attachment_image_tag post, :product_image, :fill, 200, 200, class: "post_index_img", fallback: "no_image_square.jpg", size: '200x200' %>
+       				</div>
+        			<div class="top_list_box">
+          				<div class="post_top_name">
+            				<%= post.title %>
+         				</div>
+          				<div class="post_top_day">
+          					<%= l post.created_at, format: :short %>
+          				</div>
+        			</div>
+      			</div>
+    		<% end %>
+  		<% end %>
+	</div>
 </div>

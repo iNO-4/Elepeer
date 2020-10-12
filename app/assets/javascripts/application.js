@@ -17,6 +17,7 @@
 //= require bootstrap-sprockets
 //= require iscroll.js
 //= require drawer.js
+//= require jquery.raty.js
 //= require_tree .
 
 $(document).on('turbolinks:load', function() {

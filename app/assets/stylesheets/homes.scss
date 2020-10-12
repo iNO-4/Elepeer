@@ -38,8 +38,8 @@
     color: white;
     font-size: 80px;
     position: absolute;
-    left: 61%;
-    top: 40%;
+    left: 55%;
+    top: 30%;
 }
 
 .about_message1 {
@@ -92,6 +92,7 @@
 	font-family: 'Noto Sans JP', sans-serif;
 	position: relative;
 	display: inline-block;
+	margin-bottom: 50px;
 }
 
 /* 下線 */
@@ -107,6 +108,46 @@
 	background-color: #b7282c; /*線の色*/
 	border-radius: 2px; /*線の丸み*/
 }
+
+.post_top_box {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 100px;
+}
+
+.post_top_item{
+	padding: 0 0 30px 25px;
+}
+
+.top_list_box {
+	width: 200px;
+	height: 70px;
+	background-color: #ffccf2;
+	position:relative;
+}
+
+.post_top_name {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: white;
+}
+
+.post_top_name:hover {
+	color: white;
+}
+
+.post_top_day {
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+	color: white;
+}
+
+.post_top_day:hover {
+	color: white;
+}
+
 
 
 /* homes/about */
