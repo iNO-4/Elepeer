@@ -59,7 +59,7 @@ body {
 }
 
 .drawer-nav {
-	height: 80%;
+	height: 100%;
 	padding-top: 70px;
 	background-color: white;
 }
@@ -79,7 +79,7 @@ body {
 	background-color: #b7282c;
 }
 
-/*フッターを下に固定するもの*/
+/* フッターを下に固定するもの */
 #wrapper {
 	display: flex;
 	flex-direction: column;
@@ -98,7 +98,8 @@ footer p {
     padding-top: 25px;
 }
 
-/*devise/registrations*/
+
+/* devise/registrations */
 
 .registrations_container {
 	padding-top: 70px;

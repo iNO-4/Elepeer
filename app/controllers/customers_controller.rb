@@ -6,6 +6,7 @@ class CustomersController < ApplicationController
 
   def show
     @customer = Customer.find(params[:id])
+    @post = @customer.posts
   end
 
   def edit
@@ -36,7 +37,7 @@ class CustomersController < ApplicationController
 
   def customer_params
     params.require(:customer).permit(
-      :last_name, :first_name, :last_name_kana, :first_name_kana, :handle_name, :email, :is_deleted)
+      :last_name, :first_name, :last_name_kana, :first_name_kana, :handle_name, :email, :is_deleted, :profile_image)
   end
 
 end

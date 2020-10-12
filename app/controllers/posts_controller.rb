@@ -1,10 +1,17 @@
 class PostsController < ApplicationController
 
   def index
-  	@post = Post.all
+  	@posts = Post.all
   end
 
   def all
+  	@posts = Post.where(customer_id: params[:customer_id])
+    @customer = Customer.find(params[:customer_id])
+  end
+
+  def ranking
+    @posts = Post.joins(:favorites).group("favorites.post_id").order("count(favorites.id) desc").limit(10)
+  	#@posts = Post.all.sort {|a,b| b.favorited_customers.count <=> a.favorited_customers.count}.slice(0,10)
   end
 
   def new
@@ -23,6 +30,8 @@ class PostsController < ApplicationController
 
   def show
   	@post = Post.find(params[:id])
+  	@customer = Customer.find_by(id: @post.customer_id)
+    @post_comment = PostComment.new
   end
 
   def edit
@@ -37,6 +46,9 @@ class PostsController < ApplicationController
   end
 
   def destroy
+  	@post = Post.find(params[:id])
+    @post.destroy
+    redirect_to mypage_customer_path(current_customer)
   end
 
   private

@@ -18,10 +18,16 @@ Rails.application.routes.draw do
 	end
 
 	resources :posts do
-		member do
+		resources :post_comments, only: [:create, :destroy]
+		resource  :favorites, only: [:create, :destroy]
+		collection do
 		  get 'all'
+		  get 'ranking'
 		end
 	end
+
+	resources :bookmarks, only: [:create, :destroy, :index]
+
 
 	resources :reviews
 

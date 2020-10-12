@@ -1,3 +1,326 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/* posts/new */
+
+.post_new_container {
+	padding-top: 70px;
+	margin-bottom: 70px;
+	font-family: 'Noto Sans JP', sans-serif;
+}
+
+.post_new_title {
+	font-size: 25px;
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+.col-xs-5.post_new_img_box {
+    padding-left: 100px;
+}
+
+.post_new_img_button {
+	padding-top: 45px;
+	padding-left: 65px;
+}
+
+.post_new_box {
+    padding-right: 100px;
+}
+
+.post_new_item {
+	margin-bottom: 20px;
+}
+
+.post_new_item_a {
+	margin-bottom: 20px;
+	display: flex;
+}
+
+.post_new_in_item_b {
+	padding-left: 20px;
+}
+
+.comment_area {
+	width: 430px;
+	height: 185px;
+}
+
+.title_area {
+	width: 430px;
+	height: 30px;
+}
+
+.name_area {
+	width: 430px;
+	height: 30px;
+}
+
+.post_new_rate {
+	margin-right: 10px;
+}
+
+.post_new_actions {
+	margin-top: 50px;
+	text-align: center;
+}
+
+.title_area::placeholder {
+	text-align: right;
+}
+
+.name_area::placeholder {
+	text-align: right;
+}
+
+
+/* post/show */
+
+.post_show_container {
+	padding-top: 70px;
+	margin-bottom: 85px;
+	font-family: 'Noto Sans JP', sans-serif;
+}
+
+.post_show_title {
+	font-size: 20px;
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+.user_img_tag p {
+	display: inline-block;
+	padding-right: 15px;
+}
+
+.col-xs-5.post_show_img_box {
+    padding-left: 130px;
+}
+
+.col-xs-offset-1.col-xs-4.post_show_box {
+    padding-left: 60px;
+}
+
+.post_show_item {
+	margin-bottom: 25px;
+}
+
+.post_show_item_a {
+	margin-bottom: 25px;
+	display: flex;
+}
+
+.post_show_item_b {
+	margin-bottom: 20px;
+}
+
+.post_show_item_c {
+	margin-bottom: 25px;
+	display: flex;
+}
+
+.post_show_in_item_b {
+	padding-left: 40px;
+}
+
+.post_show_in_item_c {
+	padding-left: 40px;
+}
+
+.post_show_in_item_e {
+	padding-left: 40px;
+}
+
+.post_show_action {
+	text-align: center;
+	margin-top: 80px;
+	margin-bottom: 80px;
+}
+
+.post_show_comments {
+	padding-left: 50px;
+}
+
+.comment_form {
+	margin-top: 50px;
+	padding-left: 200px;
+}
+
+.comment_area_show {
+	width: 710px;
+	height: 50px;
+	margin-right: 15px;
+}
+
+.comment_area_show::placeholder {
+	padding-left: 5px;
+}
+
+input.btn.btn-base-1.btn-md {
+	margin-bottom: 20px;
+}
+
+
+/* post/index */
+
+.post_index_container {
+	padding-top: 70px;
+	margin-bottom: 70px;
+	font-family: 'Noto Sans JP', sans-serif;
+}
+
+.post_index_title {
+	font-size: 25px;
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+.post_index_box {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.post_index_item{
+	padding: 0 0 30px 25px;
+}
+
+.list_box {
+	width: 200px;
+	height: 70px;
+	background-color: #ffccf2;
+	position:relative;
+}
+
+.post_index_name {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: white;
+}
+
+.post_index_name:hover {
+	color: white;
+}
+
+.post_index_day {
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+	color: white;
+}
+
+.post_index_day:hover {
+	color: white;
+}
+
+
+
+/* post/edit */
+
+.post_edit_container {
+	padding-top: 70px;
+	margin-bottom: 70px;
+	font-family: 'Noto Sans JP', sans-serif;
+}
+
+.post_edit_title {
+	font-size: 25px;
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+.col-xs-5.post_edit_img_box {
+    padding-left: 100px;
+}
+
+.post_edit_img_button {
+	padding-top: 45px;
+	padding-left: 65px;
+}
+
+.post_edit_box {
+    padding-right: 100px;
+}
+
+.post_edit_item {
+	margin-bottom: 20px;
+}
+
+.post_edit_item_a {
+	margin-bottom: 20px;
+	display: flex;
+}
+
+.post_edit_in_item_b {
+	padding-left: 20px;
+}
+
+.comment_area_edit {
+	width: 430px;
+	height: 185px;
+}
+
+.title_area_edit {
+	width: 430px;
+	height: 30px;
+}
+
+.name_area_edit {
+	width: 430px;
+	height: 30px;
+}
+
+.post_edit_rate {
+	margin-right: 10px;
+}
+
+.post_edit_actions {
+	margin-top: 50px;
+	text-align: center;
+}
+
+
+/* post/ranking */
+
+.post_ranking_container {
+	padding-top: 70px;
+	margin-bottom: 70px;
+	font-family: 'Noto Sans JP', sans-serif;
+}
+
+.post_ranking_title {
+	font-size: 25px;
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+.post_ranking_box {
+	text-align: center;
+	width:500px;
+	margin: 0 auto;
+}
+
+.post_ranking_box p {
+	font-size: 18px;
+}
+
+.post_ranking_item{
+	padding: 0 0 30px 0;
+	background-color: #ffccf2;
+	width: 200px;
+	height: 270px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+
+.post_index_img_a {
+	z-index: 2;
+}
+
+.list_box_a {
+	height: 70px;
+	position:relative;
+	z-index: 1;
+}

@@ -1,37 +1,119 @@
 <div class="container post_show_container">
-	<div class="post_show_title">投稿詳細</div>
+	<div class="row">
+		<div class="post_show_title">投稿詳細</div>
 
-	<div class="post_show_box">
-		<div class="post_show_item">
-			<%= attachment_image_tag @post, :product_image, :fill, 100, 100, class: "product_image_show", fallback: "no_image.jpg" %>
-		<div class="post_show_item">
-			<p>タイトル</p>
-			<%= @post.title %>
+		<div class="col-xs-12 post_show_user_box">
+			<%= link_to customer_path(@customer) do %>
+				<div class="pull-right user_img_tag">
+					<p><%= @customer.handle_name %></p>
+					<%= attachment_image_tag @customer, :profile_image, :fill, 80, 80, class: "img-circle user_image_show", fallback: "no_image_square.jpg", size: '80x80' %>
+				</div>
+			<% end %>
 		</div>
-		<div class="post_show_item">
-			<p>商品名</p>
-			<%= @post.product_name %>
+
+		<div class="col-xs-5 post_show_img_box">
+			<%= attachment_image_tag @post, :product_image, :fill, 400, 400, class: "post_show_img", fallback: "no_image_square.jpg", size: '400x399' %>
 		</div>
-		<div class="post_show_item">
-			<p>購入日</p>
-			<%= @post.bay_day %>
-		</div>
-		<div class="post_show_item">
-			<p>購入時価格</p>
-			<%= @post.price %>
-		</div>
-		<div class="post_show_item">
-			<p>コメント</p>
-			<%= @post.body %>
-		</div>
-		<div class="post_show_item">
-			<p>評価</p>
-			<div id="star-rate"></div>
-		</div>
-		<div class="post_show_action">
-			<%= link_to '編集する', edit_post_path(@post), class: "btn btn-primary btn-sm" %>
+
+		<div class="col-xs-offset-1 col-xs-6 post_show_box">
+			<div class="post_show_item">
+				<p>タイトル</p>
+				<p><%= @post.title %></p>
+			</div>
+			<div class="post_show_item">
+				<p>商品名</p>
+				<p><%= @post.product_name %></p>
+			</div>
+			<div class="post_show_item_a">
+				<div class="post_show_in_item_a">
+					<p>購入日</p>
+					<p><%= @post.bay_day %></p>
+				</div>
+				<div class="post_show_in_item_b">
+					<p>購入時価格</p>
+					<p>¥<%= @post.price.to_s(:delimited) %></p>
+				</div>
+				<div class="post_show_in_item_c">
+					<p>投稿日</p>
+					<p><%= l @post.created_at, format: :short %></p>
+				</div>
+			</div>
+			<div class="post_show_item_b">
+				<p>コメント</p>
+				<p><%= @post.body %></p>
+			</div>
+
+			<div class="post_show_item_c">
+				<div class="post_show_in_item_d">
+					<p>いいね</p>
+					<% if @post.favorited_by?(current_customer) %>
+					  <td>
+					  	<%= link_to post_favorites_path(@post), method: :delete do %>
+					  	  <span class="glyphicon glyphicon-heart" aria-hidden="true" style="color: red;"></span>
+					  	  <%= @post.favorites.count %>
+					  	<% end %>
+					  </td>
+					<% else %>
+					  <td>
+					  	<%= link_to post_favorites_path(@post), method: :post do %>
+					  	  <span class="glyphicon glyphicon-heart-empty" aria-hidden="true" ></span>
+					  	  <%= @post.favorites.count %>
+					  	<% end %>
+					  </td>
+					<% end %>
+				</div>
+				<div class="post_show_in_item_e">
+					<p>評価</p>
+					<div id="star-rate"></div>
+				</div>
+			</div>
 		</div>
 	</div>
+
+	<% if @post.customer == current_customer %>
+		<div class="post_show_action">
+			<%= link_to '編集する', edit_post_path(@post), class: "btn btn-primary btn-md" %>
+			<%= link_to "削除する", post_path(@post), method: :delete, data: {confirm: "本当に削除してもよろしいですか？"}, class: "btn btn-danger btn-md destroy_post_#{@post.id}" %>
+		</div>
+	<% else %>
+		<div class="post_show_action">
+			<%= link_to 'お気に入りへ追加', bookmarks_path(post_id: @post.id), method: :post, class: "btn btn-primary btn-md" %>
+		</div>
+	<% end %>
+
+	<div class="post_show_comments">
+		<p>コメント一覧</p>
+		<% @post.post_comments.each do |post_comment| %>
+			<li class="comment">
+				<div class="comment_text">
+					<div class="comment_entry">
+						<%= post_comment.comment %>
+					</div>
+					<div class="comment_name">
+						<%= post_comment.customer.handle_name %>
+					</div>
+					<div class="comment_date">
+						<%= post_comment.created_at.strftime('%Y/%m/%d') %>
+					</div>
+					<% if post_comment.customer == current_customer %>
+						<div class="comment_d">
+							<%= link_to "コメントを削除する", post_post_comment_path(post_comment.post, post_comment), method: :delete, class: "btn btn-danger btn-md" %>
+						</div>
+					<% end %>
+				</div>
+			</li>
+		<% end %>
+	</div>
+
+	<%= form_for [@post, @post_comment] do |f| %>
+		<div class="row comment_form">
+			<div class="col-xs-12">
+				<p>コメント投稿</p>
+				<%= f.text_area :comment, class: "comment_area_show", placeholder: "50文字以内" %>
+				<%= f.submit "コメントする", class: "btn btn-base-1 btn-md" %>
+			</div>
+		</div>
+	<% end %>
 </div>
 
 <script>
