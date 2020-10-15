@@ -21,6 +21,7 @@ class CustomersController < ApplicationController
   end
 
   def index
+    @customers = Customer.all
   end
 
   def unsubscribe
@@ -28,7 +29,7 @@ class CustomersController < ApplicationController
     if request.patch?
       @customer.update(is_deleted: true)
       reset_session
-      redirect_to root_path
+      redirect_to thanks_customer_path
     end
   end
 

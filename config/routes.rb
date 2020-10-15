@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 	root 'homes#top'
 
 	get 'homes/about'
+	get 'homes/author'
 
   	resources :customers, only: [:show, :edit, :update, :index] do
 	  	member do

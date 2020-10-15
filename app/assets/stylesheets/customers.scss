@@ -8,13 +8,38 @@
 .mypage_container {
 	padding-top: 70px;
 	text-align: center;
-	font-family: 'Noto Sans JP', sans-serif;
 }
 
 .mypage_title {
-	font-size: 25px;
 	margin-bottom: 50px;
 }
+
+.mypage_title_1 {
+	font-size: 25px;
+	color: #b7282c;
+	position: relative;
+	display: inline-block;
+}
+
+.mypage_title_1:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -5px;/*線の上下位置*/
+  display: inline-block;
+  width: 250px;/*線の長さ*/
+  height: 1px;/*線の太さ*/
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);/*位置調整*/
+  background-color: #b7282c;/*線の色*/
+  border-radius: 2px;/*線の丸み*/
+}
+
+.mypage_title_2 {
+	color: #b7282c;
+	font-size: 25px;
+}
+
 
 .mypage_list {
 	margin-bottom: 40px;
@@ -23,7 +48,7 @@
 .mypage_item {
 	color: black;
 	dispray: inline-block;
-	border-bottom: solid 2px #b7282c;
+	border-bottom: solid 1px #b7282c;
 	font-size: 20px;
 }
 
@@ -37,14 +62,38 @@
 
 .user_information_container {
 	padding-top: 70px;
-	margin-bottom: 70px;
-	font-family: 'Noto Sans JP', sans-serif;
+	margin-bottom: 90px;
 }
 
 .user_information_title {
-	font-size: 25px;
 	margin-bottom: 50px;
 	text-align: center;
+}
+
+.user_information_title_1 {
+	font-size: 25px;
+	color: #b7282c;
+	position: relative;
+	display: inline-block;
+}
+
+.user_information_title_1:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -5px;/*線の上下位置*/
+  display: inline-block;
+  width: 250px;/*線の長さ*/
+  height: 1px;/*線の太さ*/
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);/*位置調整*/
+  background-color: #b7282c;/*線の色*/
+  border-radius: 2px;/*線の丸み*/
+}
+
+.user_information_title_2 {
+	color: #b7282c;
+	font-size: 25px;
 }
 
 .user_information_item {
@@ -53,7 +102,7 @@
 
 .user_information_box {
 	font-size: 15px;
-	margin-top: 60px;
+	margin-top: 40px;
 	margin-left: 60px;
 }
 
@@ -92,18 +141,44 @@
 	font-size: 15px;
 }
 
+
 /* custmers/edit */
 
 .user_edit_container {
 	padding-top: 70px;
 	margin-bottom: 70px;
-	font-family: 'Noto Sans JP', sans-serif;
 }
 
 .user_edit_title {
 	font-size: 25px;
 	margin-bottom: 50px;
 	text-align: center;
+}
+
+.user_edit_title_1 {
+	font-size: 25px;
+	color: #b7282c;
+	position: relative;
+	display: inline-block;
+}
+
+.user_edit_title_1:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -5px;/*線の上下位置*/
+  display: inline-block;
+  width: 250px;/*線の長さ*/
+  height: 1px;/*線の太さ*/
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);/*位置調整*/
+  background-color: #b7282c;/*線の色*/
+  border-radius: 2px;/*線の丸み*/
+}
+
+.user_edit_title_2 {
+	color: #b7282c;
+	font-size: 25px;
 }
 
 .col-xs-3.user_edit_img {
@@ -116,8 +191,8 @@
 }
 
 .user_edit_box {
-	font-size: 17px;
-	padding-right: 50px;
+	font-size: 16px;
+	padding-right: 125px;
 }
 
 .user_edit_item {
@@ -129,13 +204,13 @@
 }
 
 .user_edit_actions {
-	margin-top: 90px;
+	margin-top: 45px;
 	text-align: center;
 }
 
 .user_edit_actions2 {
 	text-align: center;
-	margin-top: 50px;
+	margin-top: 80px;
 }
 
 
@@ -143,7 +218,6 @@
 
 .user_unsubscribe_container {
 	padding-top: 150px;
-	font-family: 'Noto Sans JP', sans-serif;
 }
 
 .user_unsubscribe_title {
@@ -176,4 +250,70 @@
 .user_unsubscribe_button2 {
 	margin-left: 50px;
 	display: inline-block;
+}
+
+
+/* customer/index */
+
+.user_index_container {
+	padding-top: 70px;
+	margin-bottom: 70px;
+}
+
+.user_index_title {
+	margin-bottom: 80px;
+	text-align: center;
+}
+
+.user_index_title_1 {
+	font-size: 25px;
+	color: #b7282c;
+	position: relative;
+	display: inline-block;
+}
+
+.user_index_title_1:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -5px;/*線の上下位置*/
+  display: inline-block;
+  width: 250px;/*線の長さ*/
+  height: 1px;/*線の太さ*/
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);/*位置調整*/
+  background-color: #b7282c;/*線の色*/
+  border-radius: 2px;/*線の丸み*/
+}
+
+.user_index_title_2 {
+	color: #b7282c;
+	font-size: 25px;
+}
+
+.user_index_box {
+	display: flex;
+	text-align: center;
+}
+
+.user_index_item {
+	padding: 0 50px 50px 0;
+}
+
+.user_index_name {
+	padding-top: 10px;
+}
+
+
+/* customer/thanks */
+
+.thanks {
+	text-align: center;
+	padding-top: 150px;
+	font-size: 25px;
+}
+
+.thanks_item {
+	font-size: 15px;
+	padding-top: 40px;
 }
